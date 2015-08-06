@@ -1,0 +1,70 @@
+/* Text */
+
+body {
+	font-family: "Lato", sans-serif;	/* suggested font */
+	color: #747704;	/* suggested color */
+	font-weight: 300;
+}
+
+
+.text-muted {
+	color: #bcbbbb;	/* suggested color */
+}
+
+
+.text-thin {
+	font-weight: 100;
+}
+
+
+.title-super {
+	font-size: 4.25em;
+}
+
+
+/* Images */
+
+img {
+	width: 100%;
+	object-fit: cover;	/* keeps image from overflowing its bounds */
+}
+
+
+.main-img {
+	max-height: 60vh;	/* using vh units for scalability */
+}
+
+
+.clip-img {
+	max-height: 25vh;
+}
+
+
+/* Header */
+
+.title-logo {			/* Udacity Logo from website, added circle to match example */
+	height: 9em;		/* using em units for scalablity */
+	width: 9em;
+	margin: 2em 0 0 -0.33em;
+	padding: 0.33em;	/* adjusts size of logo relative to border */
+	border: 0.75em solid #ef6518;  /* suggested color was #f8981c, adjusted to better match logo */
+	border-radius: 50%;	/* adds circle around logo */
+}
+
+
+hr {
+	border-width: 3px;
+	border-color: #747704;
+}
+
+
+/* Body */
+
+article {		/* Set up article effect */
+	transition: transform 0.333s;
+}
+
+
+article:hover {		/* Makes article grow when hover'd */
+	transform: scale(1.1);
+}

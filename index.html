@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<!--  These metas given in lecture  -->
+	<meta http-equiv="X-UA-Compatable" content="IE-edge"> <!-- if IE, use best IE available -->
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- set page width to fit device's screen -->
+
+	<title>Portfolio</title>
+
+	<meta name="student" content="Dave Figueroa">
+	<meta name="description" content="Project 1: Build a Portfolio Page">
+
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:300,100'> <!-- suggested font match -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script> <!-- required for Booststrap plugins -->
+	<script src="js/bootstrap.min.js" defer></script> <!-- Added defer per suggestion of reviewer -->
+</head>
+<body>
+	<div class="container">
+
+	<header class="row"> <!-- Must have a row for every group of columns -->
+
+		<div class="col-md-2 col-sm-3"> <!-- added col-sm to improve responsive display -->
+			<img class="img-responsive title-logo" src="images/udacity_logo.svg" alt="udacity logo">
+		</div>
+		<div class="col-md-10 col-sm-9 text-right text-uppercase">
+			<h1 class="text-thin title-super">Dave Figueroa</h1>
+			<h3>Webonaut Extraordinaire</h3> <!-- Absurd title, I just wanted something unique -->
+		</div>
+
+	</header>
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr> <!-- adding .col-md-12 directly to <hr> caused undesired offset, added div wrapper -->
+		</div>
+	</div>
+
+	<!-- main picture -->
+	<div class="row" data-toggle="tooltip"
+		title="The Temples of Paestum in the Evening Light, oil painting by Jules Coignet (1860)"> <!-- found tooltips in Bootstrap documentation -->
+		<img class="col-md-12 img-responsive main-img"
+			src="images/ruin1280.jpg"
+			srcset="images/ruin1280.jpg 1280w, images/ruin640.jpg 640w"
+			sizes = "90vw"
+			alt="The temples at Paestum by Jules Coignet; Public Domain"> <!-- used imagemagick to make jpegs for srcset -->
+	</div>
+
+	<section class="featured-work">
+
+		<div class="row">
+			<h2 class="col-md-12 text-muted">Featured Work</h2>
+		</div>
+
+		<div class="row text-center">
+
+			<article class="col-md-4" data-toggle="modal" data-target=".art1">
+				<img class="img-responsive center-block clip-img" src="images/elephant.jpg" alt="Elephant in acrylic, from Art by MarkAC; Creative Commons: CC-BY-SA">
+				<h2 class="text-uppercase">Elephant</h2>
+				<p>images/elephant.jpg</p>
+			</article>
+
+			<article class="col-md-4" data-toggle="modal" data-target=".art2">
+				<img class="img-responsive center-block clip-img" src="images/legos.jpg" alt="Lego Robot at Brickfair 2010, photo by Bosta; Creative Commons: CC-BY">
+				<h2 class="text-uppercase">Lego Robot</h2>
+				<p>images/legos.jpg</p>
+			</article>
+
+			<article class="col-md-4" data-toggle="modal" data-target=".art3">
+				<img class="img-responsive center-block clip-img" src="images/moon.jpg" alt="First Quarter Moon, 1250mm photo by Nohrmal; Creative Commons: CC-BY-ND">
+				<h2 class="text-uppercase">Moon</h2>
+				<p>images/moon.jpg</p>
+			</article>
+
+		</div> <!-- end articles row -->
+
+	</section> <!-- end featured-work -->
+
+	<!-- Modals -->
+	<div class="modal fade art1" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+			<div class="modal-header">
+				<h3 class="modal-title">Elephant</h3>
+			</div>  <!-- end modal-header -->
+
+			<div class="modal-body">
+				<img class="main-img" src="images/elephant.jpg" alt="Elephant on acrylic, from Art by MarkAC, Creative Commons: CC-BY-SA">
+				<p>Ceci n'est pas un Elephant. (It's just a picture)</p>
+			</div>  <!-- end modal-body -->
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>  <!-- end modal-footer -->
+
+			</div>  <!-- end modal-content -->
+		</div> <!-- end modal-dialog -->
+	</div> <!-- end modal -->
+
+	<div class="modal fade art2" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+			<div class="modal-header">
+				<h3 class="modal-title">Lego Robot</h3>
+			</div>  <!-- end modal-header -->
+
+			<div class="modal-body">
+				<img class="main-img" src="images/legos.jpg" alt="Lego Robot at Brickfair 2010, photo by Bosta; Creative Commons: CC-BY">
+				<p>Legos are fun. Robots are amazing. This lego robot rules.</p>
+			</div>  <!-- end modal-body -->
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>  <!-- end modal-footer -->
+
+			</div>  <!-- end modal-content -->
+		</div> <!-- end modal-dialog -->
+	</div> <!-- end modal -->
+
+	<div class="modal fade art3" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+			<div class="modal-header">
+				<h3 class="modal-title">Moon</h3>
+			</div>  <!-- end modal-header -->
+
+			<div class="modal-body">
+				<img class="main-img" src="images/moon.jpg" alt="First Quarter Moon, 1250mm photo by Nohrmal; Creative Commons: CC-BY-ND">
+				<p>Everything is better with a telescope.</p>
+			</div>  <!-- end modal-body -->
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>  <!-- end modal-footer -->
+
+			</div>  <!-- end modal-content -->
+		</div> <!-- end modal-dialog -->
+	</div> <!-- end modal -->
+
+	</div> <!-- end container -->
+
+</body>
+</html>
